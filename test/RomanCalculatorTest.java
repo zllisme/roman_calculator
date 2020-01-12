@@ -31,4 +31,13 @@ public class RomanCalculatorTest {
     assertEquals("IV", result.getRomanNum());
   }
 
+  @Test
+  public void should_return_X_when_roman_number_add_given_V_and_V() {
+    RomanCalculator romanCalculator = new RomanCalculator();
+    RomanNumeral roman1 = new RomanNumeral("V");
+    RomanNumeral roman2 = new RomanNumeral("V");
+    RomanNumeral result = romanCalculator.add(roman1, roman2);
+    assertEquals("X", result.getRomanNum());
+  }
+
 }
