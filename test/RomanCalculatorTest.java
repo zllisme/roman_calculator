@@ -82,4 +82,14 @@ public class RomanCalculatorTest {
     thrown.expectMessage("Invalid roman numeral!");
     romanCalculator.add(roman1, roman2);
   }
+
+  @Test
+  public void should_throw_InvalidInputDataException_when_roman_number_add_given_KKK_and_V() throws InvalidInputDataException {
+    RomanCalculator romanCalculator = new RomanCalculator();
+    RomanNumeral roman1 = new RomanNumeral("KKK");
+    RomanNumeral roman2 = new RomanNumeral("DL");
+    thrown.expect(InvalidInputDataException.class);
+    thrown.expectMessage("Invalid roman numeral!");
+    romanCalculator.add(roman1, roman2);
+  }
 }

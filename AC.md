@@ -53,3 +53,10 @@ given: Roman number IIV and V
 when:  Roman numbers add
 then:  Throw InvalidInputDataException that Invalid roman numeral!
 ```
+
+## 9
+```
+given: Roman number KKK and V
+when:  Roman numbers add
+then:  Throw InvalidInputDataException that Invalid roman numeral!
+```
