@@ -25,3 +25,10 @@ given: Roman number V and V
 when:  Roman numbers add
 then:  equal X 
 ```
+
+## 5
+```
+given: Roman number IV and IV
+when:  Roman numbers add
+then:  equal VIII 
+```

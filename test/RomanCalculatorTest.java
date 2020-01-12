@@ -40,4 +40,12 @@ public class RomanCalculatorTest {
     assertEquals("X", result.getRomanNum());
   }
 
+  @Test
+  public void should_return_VIII_when_roman_number_add_given_IV_and_IV() {
+    RomanCalculator romanCalculator = new RomanCalculator();
+    RomanNumeral roman1 = new RomanNumeral("IV");
+    RomanNumeral roman2 = new RomanNumeral("IV");
+    RomanNumeral result = romanCalculator.add(roman1, roman2);
+    assertEquals("VIII", result.getRomanNum());
+  }
 }
