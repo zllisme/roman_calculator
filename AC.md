@@ -46,3 +46,10 @@ given: Roman number MI and V
 when:  Roman numbers add
 then:  Throw InvalidInputDataException that roman number is more than one thousand
 ```
+
+## 8
+```
+given: Roman number IIV and V
+when:  Roman numbers add
+then:  Throw InvalidInputDataException that Invalid roman numeral!
+```

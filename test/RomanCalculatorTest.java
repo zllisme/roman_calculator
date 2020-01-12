@@ -72,4 +72,14 @@ public class RomanCalculatorTest {
     thrown.expectMessage("Roman number is more than one thousand");
     romanCalculator.add(roman1, roman2);
   }
+
+  @Test
+  public void should_throw_InvalidInputDataException_when_roman_number_add_given_IIV_and_V() throws InvalidInputDataException {
+    RomanCalculator romanCalculator = new RomanCalculator();
+    RomanNumeral roman1 = new RomanNumeral("IIV");
+    RomanNumeral roman2 = new RomanNumeral("DL");
+    thrown.expect(InvalidInputDataException.class);
+    thrown.expectMessage("Invalid roman numeral!");
+    romanCalculator.add(roman1, roman2);
+  }
 }
