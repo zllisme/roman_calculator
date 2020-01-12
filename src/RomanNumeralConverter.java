@@ -23,6 +23,9 @@ public class RomanNumeralConverter {
   };
 
   static int convertRomanToInt(String romanNumeral) {
+    if (isRomanHasInvalidChar(romanNumeral)) {
+      return -1;
+    }
     int resultInt = baseRomanToIntMap.get(romanNumeral.charAt(romanNumeral.length() - 1));
     for (int i = romanNumeral.length() - 1; i > 0; i--) {
       Integer currentInt = baseRomanToIntMap.get(romanNumeral.charAt(i));
@@ -30,6 +33,15 @@ public class RomanNumeralConverter {
       resultInt = currentInt > previousInt ? resultInt - previousInt : resultInt + previousInt;
     }
     return resultInt;
+  }
+
+  private static boolean isRomanHasInvalidChar(String romanNumeral) {
+    for (int i = 0; i < romanNumeral.length(); i++) {
+      if(!baseRomanToIntMap.keySet().contains(romanNumeral.charAt(i))) {
+        return true;
+      }
+    }
+    return false;
   }
 
   static String convertIntToRoman(int intNum) {

@@ -16,6 +16,6 @@ class RomanCalculator {
   }
 
   private boolean isRomanInvalid(RomanNumeral roman) {
-    return !roman.getRomanNum().equals(RomanNumeralConverter.convertIntToRoman(roman.getIntValue()));
+    return roman.getIntValue() == -1 || !roman.getRomanNum().equals(RomanNumeralConverter.convertIntToRoman(roman.getIntValue()));
   }
 }
