@@ -48,4 +48,13 @@ public class RomanCalculatorTest {
     RomanNumeral result = romanCalculator.add(roman1, roman2);
     assertEquals("VIII", result.getRomanNum());
   }
+
+  @Test
+  public void should_return_MCDL_when_roman_number_add_given_CM_and_DL() {
+    RomanCalculator romanCalculator = new RomanCalculator();
+    RomanNumeral roman1 = new RomanNumeral("CM");
+    RomanNumeral roman2 = new RomanNumeral("DL");
+    RomanNumeral result = romanCalculator.add(roman1, roman2);
+    assertEquals("MCDL", result.getRomanNum());
+  }
 }

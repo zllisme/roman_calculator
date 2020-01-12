@@ -32,3 +32,10 @@ given: Roman number IV and IV
 when:  Roman numbers add
 then:  equal VIII 
 ```
+
+## 6
+```
+given: Roman number CM and DL
+when:  Roman numbers add
+then:  equal MCDL
+```
