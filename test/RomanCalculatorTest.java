@@ -22,4 +22,13 @@ public class RomanCalculatorTest {
     assertEquals("III", result.getRomanNum());
   }
 
+  @Test
+  public void should_return_IV_when_roman_number_add_given_II_and_II() {
+    RomanCalculator romanCalculator = new RomanCalculator();
+    RomanNumeral roman1 = new RomanNumeral("II");
+    RomanNumeral roman2 = new RomanNumeral("II");
+    RomanNumeral result = romanCalculator.add(roman1, roman2);
+    assertEquals("IV", result.getRomanNum());
+  }
+
 }

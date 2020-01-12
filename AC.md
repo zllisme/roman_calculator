@@ -11,3 +11,10 @@ given: Roman number I and II
 when:  Roman numbers add
 then:  equal III 
 ```
+
+## 3
+```
+given: Roman number II and II
+when:  Roman numbers add
+then:  equal IV 
+```
