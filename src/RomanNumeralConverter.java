@@ -20,7 +20,8 @@ public class RomanNumeralConverter {
     int resultInt = baseRomanToIntMap.get(romanNumeral.charAt(romanNumeral.length() - 1));
     for (int i = romanNumeral.length() - 1; i > 0; i--) {
       Integer currentInt = baseRomanToIntMap.get(romanNumeral.charAt(i));
-      resultInt += currentInt;
+      Integer previousInt = baseRomanToIntMap.get(romanNumeral.charAt(i - 1));
+      resultInt = currentInt > previousInt ? resultInt - previousInt : resultInt + previousInt;
     }
     return resultInt;
   }
