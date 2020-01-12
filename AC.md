@@ -39,3 +39,10 @@ given: Roman number CM and DL
 when:  Roman numbers add
 then:  equal MCDL
 ```
+
+## 7
+```
+given: Roman number MI and V
+when:  Roman numbers add
+then:  Throw InvalidInputDataException that roman number is more than one thousand
+```

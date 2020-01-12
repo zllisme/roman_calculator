@@ -1,8 +1,13 @@
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.assertEquals;
 
 public class RomanCalculatorTest {
+
+  @Rule
+  public ExpectedException thrown = ExpectedException.none();
 
   @Test
   public void should_return_II_when_roman_number_add_given_I_and_I() {
@@ -56,5 +61,15 @@ public class RomanCalculatorTest {
     RomanNumeral roman2 = new RomanNumeral("DL");
     RomanNumeral result = romanCalculator.add(roman1, roman2);
     assertEquals("MCDL", result.getRomanNum());
+  }
+
+  @Test
+  public void should_throw_InvalidInputDataException_when_roman_number_add_given_MI_and_V() throws InvalidInputDataException {
+    RomanCalculator romanCalculator = new RomanCalculator();
+    RomanNumeral roman1 = new RomanNumeral("MI");
+    RomanNumeral roman2 = new RomanNumeral("V");
+    thrown.expect(InvalidInputDataException.class);
+    thrown.expectMessage("Roman number is more than one thousand");
+    romanCalculator.add(roman1, roman2);
   }
 }
