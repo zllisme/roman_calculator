@@ -10,7 +10,7 @@ public class RomanCalculatorTest {
   public ExpectedException thrown = ExpectedException.none();
 
   @Test
-  public void should_return_II_when_roman_number_add_given_I_and_I() {
+  public void should_return_II_when_roman_number_add_given_I_and_I() throws InvalidInputDataException {
     RomanCalculator romanCalculator = new RomanCalculator();
     RomanNumeral roman1 = new RomanNumeral("I");
     RomanNumeral roman2 = new RomanNumeral("I");
@@ -19,7 +19,7 @@ public class RomanCalculatorTest {
   }
 
   @Test
-  public void should_return_III_when_roman_number_add_given_I_and_II() {
+  public void should_return_III_when_roman_number_add_given_I_and_II() throws InvalidInputDataException {
     RomanCalculator romanCalculator = new RomanCalculator();
     RomanNumeral roman1 = new RomanNumeral("I");
     RomanNumeral roman2 = new RomanNumeral("II");
@@ -28,7 +28,7 @@ public class RomanCalculatorTest {
   }
 
   @Test
-  public void should_return_IV_when_roman_number_add_given_II_and_II() {
+  public void should_return_IV_when_roman_number_add_given_II_and_II() throws InvalidInputDataException {
     RomanCalculator romanCalculator = new RomanCalculator();
     RomanNumeral roman1 = new RomanNumeral("II");
     RomanNumeral roman2 = new RomanNumeral("II");
@@ -37,7 +37,7 @@ public class RomanCalculatorTest {
   }
 
   @Test
-  public void should_return_X_when_roman_number_add_given_V_and_V() {
+  public void should_return_X_when_roman_number_add_given_V_and_V() throws InvalidInputDataException {
     RomanCalculator romanCalculator = new RomanCalculator();
     RomanNumeral roman1 = new RomanNumeral("V");
     RomanNumeral roman2 = new RomanNumeral("V");
@@ -46,7 +46,7 @@ public class RomanCalculatorTest {
   }
 
   @Test
-  public void should_return_VIII_when_roman_number_add_given_IV_and_IV() {
+  public void should_return_VIII_when_roman_number_add_given_IV_and_IV() throws InvalidInputDataException {
     RomanCalculator romanCalculator = new RomanCalculator();
     RomanNumeral roman1 = new RomanNumeral("IV");
     RomanNumeral roman2 = new RomanNumeral("IV");
@@ -55,7 +55,7 @@ public class RomanCalculatorTest {
   }
 
   @Test
-  public void should_return_MCDL_when_roman_number_add_given_CM_and_DL() {
+  public void should_return_MCDL_when_roman_number_add_given_CM_and_DL() throws InvalidInputDataException {
     RomanCalculator romanCalculator = new RomanCalculator();
     RomanNumeral roman1 = new RomanNumeral("CM");
     RomanNumeral roman2 = new RomanNumeral("DL");
